@@ -1,14 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/unimate/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <script type="module" crossorigin src="/unimate/assets/index-YEiTsG8c.js"></script>
+    <script type="module" crossorigin src="/unimate/assets/index-BwLsqerl.js"></script>
     <link rel="stylesheet" crossorigin href="/unimate/assets/index-CrYBktwj.css">
   </head>
   <body>
-    <div id="app"></div>
+    <form id="contact-form">
+      <input name="name" placeholder="Имя" required />
+      <input name="email" type="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Сообщение" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+
+    <script>
+      const scriptURL =
+        'https://script.google.com/macros/s/AKfycbzeoNWufAIaBPFUxed8hq4B7JiIwwCe646FcMywBOWqg_HzM140BCdLvyJuSB4wqSQI0A/exec';
+
+      document
+        .getElementById('contact-form')
+        .addEventListener('submit', (e) => {
+          e.preventDefault();
+          const formData = new FormData(e.target);
+          const data = Object.fromEntries(formData.entries());
+
+          fetch(scriptURL, {
+            method: 'POST',
+            body: JSON.stringify(data),
+          })
+            .then((response) => alert('Отправлено!'))
+            .catch((error) => alert('Ошибка!'));
+        });
+    </script>
   </body>
 </html>
