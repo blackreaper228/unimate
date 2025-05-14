@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://eu-central.storage.cloudconvert.com/tasks/2cd01104-60ce-446b-a905-61fb60a9b1c1/Manrope-ExtraLight.woff2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20250512%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20250512T203732Z&X-Amz-Expires=86400&X-Amz-Signature=eb0e9eb7e7955194f213b5d2ec9a85f8a3c118d30e07ade51881442499dfe0b8&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22Manrope-ExtraLight.woff2%22&response-content-type=font%2Fwoff2&x-id=GetObject
