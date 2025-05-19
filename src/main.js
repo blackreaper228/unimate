@@ -1,5 +1,19 @@
 import "./stylesheets/reset.css";
 import "./stylesheets/fonts.css";
 import "./stylesheets/basics.css";
+import "./stylesheets/vars.css";
 import "./stylesheets/style.css";
 import "./stylesheets/typekit.css";
+
+// import "./js/form.js";
+// import "./js/scroll.js";
+import "./js/navbar.js";
+import "./js/backgroundAnim.js";
+import "./js/typewriter.js";
+import "./js/marquee.js";
+import "./js/mouseTrack.js";
+import "./js/steps.js";
+import "./js/carousel.js";
+import "./js/maqueeReviews.js";
+import "./js/scrollTo.js";
+import "./js/rolling.js";

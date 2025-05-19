@@ -1,0 +1,40 @@
+:root {
+  /* colors  */
+  --white: #ffffff;
+  --black: #000000;
+
+  --purple: #7a62ff;
+  --purplePlateBG: #7e71ff;
+  --purpleGlow: #8d82ff;
+  --purpleItems: #9b8dff;
+  --lilac: #a68dff;
+  --pink: #daa2ff;
+
+  /* gradients */
+  --purpleGr: linear-gradient(103deg, #ded6f9 -55.46%, #5e3add 91.06%);
+  --purpleGrBack: linear-gradient(-103deg, #ded6f9 -55.46%, #5e3add 91.06%);
+
+  --purpleGrRotated: linear-gradient(
+    99deg,
+    rgba(94, 58, 221, 0) -9.58%,
+    #714bf8 88.63%
+  );
+
+  /* effects */
+  --roundCorners8px: 8px;
+  --roundCorners16px: 16px;
+  --roundCorners24px: 24px;
+
+  --stroke1px: 1px solid rgba(255, 255, 255, 0.25);
+  --stroke2px: 2px solid rgba(255, 255, 255, 0.25);
+  --stroke3px: 3px solid rgba(255, 255, 255, 0.25);
+
+  --stroke1pxStrong: 1px solid rgba(255, 255, 255, 0.5);
+
+  --shadowLow: 0px 9px 55.8px 0px rgba(36, 28, 125, 0.17);
+  --shadowHigh: 0px 16px 31.3px 0px rgba(63, 29, 255, 0.25);
+
+  --backgroundBlurColor: rgba(255, 255, 255, 0.1);
+  --backgroundBlur100px: blur(100px);
+  --backgroundBlur200px: blur(100px);
+}
