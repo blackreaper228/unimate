@@ -75,8 +75,8 @@
     <!-- Рекомендуется -->
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:site_name" content="Unimate" />
-    <script type="module" crossorigin src="/assets/index-CxbWbuqr.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CVsEu6gg.css">
+    <script type="module" crossorigin src="/assets/index-BFGyFboB.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-h7HWuFkb.css">
   </head>
   <body>
     <!-- <form id="upload-form">
@@ -1453,107 +1453,52 @@
         <div class="footerCase">
           <div class="or">или</div>
         </div>
-        <div class="formsWindow">
-          <div class="formsWrap">
-            <div class="fromsWrapRow">
-              <div class="formInputWrap Short">
-                <label for="name">Имя</label>
-                <input id="name" type="text" placeholder="Иван" />
+        <form id="formUpload">
+          <div class="formsWindow">
+            <div class="formsWrap">
+              <div class="fromsWrapRow">
+                <div class="formInputWrap Short">
+                  <label for="name">Имя<span>*</span></label>
+                  <input id="name" type="text" placeholder="Иван" required />
+                </div>
+                <div class="formInputWrap Short dropDown">
+                  <label for="workType">Тип работы</label>
+                  <select name="workType" id="workType"></select>
+                </div>
               </div>
-              <div class="formInputWrap Short">
-                <label for="workType">Тип работы</label>
-                <select name="workType" id="workType">
-                  <option value="">Диплом</option>
-                  <option value="design">Курсовая</option>
-                  <option value="economics">Магистерская диссертация</option>
-                  <option value="programming">
-                    РАР (Расчетно-аналитическая работа)
-                  </option>
-                  <option value="programming">Презентация</option>
-                  <option value="programming">Эссе</option>
-                  <option value="programming">Реферат</option>
-                  <option value="programming">Домашняя работа</option>
-                  <option value="programming">Билеты к экзамену</option>
-                  <option value="programming">Контрольная работа</option>
-                  <option value="programming">Зачет</option>
-                  <option value="programming">Экзамен</option>
-                  <option value="programming">Репетиторство</option>
-                  <option value="programming">Микронаушник</option>
-                </select>
-              </div>
-            </div>
-            <div class="formInputWrap">
-              <label for="contact">Контакт для связи*</label>
-              <input
-                id="contact"
-                type="text"
-                placeholder="t.me/black_reaper228"
-              />
-            </div>
-            <div class="formInputWrap">
-              <label for="topic">Тема работы</label>
-              <input
-                type="text"
-                id="topic"
-                placeholder="Права женщин в эпоху индустриализации"
-              />
-            </div>
-            <div class="fromsWrapRow">
+
               <div class="formInputWrap">
-                <label for="size">Объём работы</label>
-                <input id="size" type="text" placeholder="2500 слов" />
+                <label for="contact">Контакт для связи<span>*</span></label>
+                <input
+                  id="contact"
+                  type="text"
+                  placeholder="t.me/black_reaper228"
+                  required
+                />
               </div>
-              <div class="formInputWrap">
-                <label for="deadline">Дедлайн</label>
-                <input type="datetime-local" id="deadline" name="deadline" />
-              </div>
-            </div>
-            <div class="formInputWrap">
-              <label for="deadline"
-                >Структура работы (количество глав и т.д.)</label
-              >
-              <textarea
-                name="workStructure"
-                id="structure"
-                placeholder="Титульный лист, содержание, сокращения, введение..."
-              ></textarea>
-            </div>
-            <div class="formInputWrap">
-              <label for="deadline"
-                >Оригинальность (уточните, входит ли цитирование в
-                оригинальность)</label
-              >
-              <input
-                id="originality"
-                type="text"
-                placeholder="Оригинальность не важна"
-              />
-            </div>
-            <div class="formInputWrap">
-              <label for="deadline">Дополнительные пожелания / материалы</label>
-              <textarea
-                name="optionalCommentary"
-                id="optional"
-                placeholder="Структура работы..."
-              ></textarea>
+
+              <!-- Динамически заменяемая часть формы -->
+              <div class="formWrapType" id="formWrapType"></div>
+
+              <button type="submit" id="submit">
+                Отправить
+                <span class="arrowWrap">
+                  <img
+                    class="arrow arrow1"
+                    src="data:image/svg+xml,%3csvg%20width='18'%20height='15'%20viewBox='0%200%2018%2015'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.89754%200.265564C10.281%20-0.0856972%2010.8662%20-0.0860445%2011.2488%200.249939L11.3216%200.32123L18%207.50008L11.3216%2014.6789C10.944%2015.0843%2010.3064%2015.1091%209.89754%2014.7346C9.489%2014.3599%209.46407%2013.7272%209.84144%2013.3215L14.3262%208.5001H1.00776C0.451191%208.5001%200%208.05238%200%207.50008C0%206.94779%200.451191%206.50006%201.00776%206.50006H14.3262L9.84144%201.67868L9.77452%201.59958C9.46807%201.19447%209.51461%200.616737%209.89754%200.265564Z'%20fill='white'/%3e%3c/svg%3e"
+                    alt="Иконка стрелки"
+                  />
+                  <img
+                    class="arrow arrow2"
+                    src="data:image/svg+xml,%3csvg%20width='18'%20height='15'%20viewBox='0%200%2018%2015'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.89754%200.265564C10.281%20-0.0856972%2010.8662%20-0.0860445%2011.2488%200.249939L11.3216%200.32123L18%207.50008L11.3216%2014.6789C10.944%2015.0843%2010.3064%2015.1091%209.89754%2014.7346C9.489%2014.3599%209.46407%2013.7272%209.84144%2013.3215L14.3262%208.5001H1.00776C0.451191%208.5001%200%208.05238%200%207.50008C0%206.94779%200.451191%206.50006%201.00776%206.50006H14.3262L9.84144%201.67868L9.77452%201.59958C9.46807%201.19447%209.51461%200.616737%209.89754%200.265564Z'%20fill='white'/%3e%3c/svg%3e"
+                    alt="Иконка стрелки"
+                  />
+                </span>
+              </button>
             </div>
           </div>
-          <button>
-            Отправить
-            <span class="arrowWrap">
-              <img
-                class="arrow arrow1"
-                src="data:image/svg+xml,%3csvg%20width='18'%20height='15'%20viewBox='0%200%2018%2015'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.89754%200.265564C10.281%20-0.0856972%2010.8662%20-0.0860445%2011.2488%200.249939L11.3216%200.32123L18%207.50008L11.3216%2014.6789C10.944%2015.0843%2010.3064%2015.1091%209.89754%2014.7346C9.489%2014.3599%209.46407%2013.7272%209.84144%2013.3215L14.3262%208.5001H1.00776C0.451191%208.5001%200%208.05238%200%207.50008C0%206.94779%200.451191%206.50006%201.00776%206.50006H14.3262L9.84144%201.67868L9.77452%201.59958C9.46807%201.19447%209.51461%200.616737%209.89754%200.265564Z'%20fill='white'/%3e%3c/svg%3e"
-                alt="Иконка стрелки"
-              />
-              <img
-                class="arrow arrow2"
-                src="data:image/svg+xml,%3csvg%20width='18'%20height='15'%20viewBox='0%200%2018%2015'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.89754%200.265564C10.281%20-0.0856972%2010.8662%20-0.0860445%2011.2488%200.249939L11.3216%200.32123L18%207.50008L11.3216%2014.6789C10.944%2015.0843%2010.3064%2015.1091%209.89754%2014.7346C9.489%2014.3599%209.46407%2013.7272%209.84144%2013.3215L14.3262%208.5001H1.00776C0.451191%208.5001%200%208.05238%200%207.50008C0%206.94779%200.451191%206.50006%201.00776%206.50006H14.3262L9.84144%201.67868L9.77452%201.59958C9.46807%201.19447%209.51461%200.616737%209.89754%200.265564Z'%20fill='white'/%3e%3c/svg%3e"
-                alt="Иконка стрелки"
-              />
-            </span>
-          </button>
-        </div>
+        </form>
+
         <div class="tgModal">
           <p>Напишете нам напрямую в Телеграме!</p>
           <a class="button" href="https://t.me/unimate1">
