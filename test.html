@@ -13,15 +13,10 @@
       <input type="file" name="file" required />
       <button type="submit">Загрузить</button>
     </form>
-    <!-- Add this status display element -->
-    <div
-      id="status"
-      style="margin-top: 20px; padding: 10px; border-radius: 4px"
-    ></div>
+
     <script>
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycbxs1rVqtINpiGHrGubNuSreg8TPLOWMp1bbScKW2p1cTWI-P_yrTdpjtvzM5ijUz-74Cw/exec";
-      const statusElement = document.getElementById("status");
+        "https://script.google.com/macros/s/AKfycbyTUVlc6-nwNnMM97U6k6ioqHj00B5GEkOwudW22v2PGCiur5jL8y4LiJkDCdS7lpLc-g/exec";
 
       document
         .getElementById("upload-form")
@@ -29,63 +24,28 @@
           e.preventDefault();
           const form = e.target;
           const file = form.file.files[0];
-
-          if (!file) {
-            showStatus("Пожалуйста, выберите файл", "error");
-            return;
-          }
-
-          showStatus("Загрузка файла...");
-
-          try {
-            const base64 = await readFileAsBase64(file);
-            const formData = new FormData();
-            formData.append("name", form.name.value);
-            formData.append("email", form.email.value);
-            formData.append("file", base64.split(",")[1]);
-            formData.append("filename", file.name);
-            formData.append("mimeType", file.type);
-
-            const response = await fetch(scriptURL, {
-              method: "POST",
-              body: new URLSearchParams([...formData]),
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-              },
-            });
-
-            if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            const data = await response.json();
-            if (data.error) {
-              throw new Error(data.error);
-            }
-
-            showStatus(
-              `Файл успешно загружен! ${data.url ? "Ссылка: " + data.url : ""}`,
-              "success"
-            );
-          } catch (error) {
-            console.error("Ошибка загрузки:", error);
-            showStatus(`Ошибка: ${error.message}`, "error");
-          }
-        });
-
-      function readFileAsBase64(file) {
-        return new Promise((resolve, reject) => {
           const reader = new FileReader();
-          reader.onload = () => resolve(reader.result);
-          reader.onerror = reject;
+
+          reader.onloadend = () => {
+            const base64 = reader.result.split(",")[1];
+
+            const data = new URLSearchParams();
+            data.append("name", form.name.value);
+            data.append("email", form.email.value);
+            data.append("file", base64);
+            data.append("filename", file.name);
+            data.append("mimeType", file.type);
+
+            fetch(scriptURL, {
+              method: "POST",
+              body: data,
+            })
+              .then(() => alert("Файл отправлен!"))
+              .catch(() => alert("Ошибка при загрузке"));
+          };
+
           reader.readAsDataURL(file);
         });
-      }
-
-      function showStatus(message, type = "") {
-        statusElement.textContent = message;
-        statusElement.className = type;
-      }
     </script>
     <script type="module" src="/src/main.js"></script>
   </body>
