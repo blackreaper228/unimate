@@ -189,7 +189,6 @@ nav {
     background-image: url("../images/noiseTexture.png");
     background-repeat: repeat;
 
-    transform: translateZ(5px); /* 💡 поместить поверх */
     transform-style: inherit;
     will-change: transform;
   }
@@ -320,6 +319,74 @@ button:hover .arrow2 {
   transform: translateX(0);
 }
 
+.lightCircle {
+  position: absolute;
+  aspect-ratio: 1;
+  opacity: 1;
+  z-index: 0;
+
+  border-radius: 9999px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #8d82ff 13.46%,
+    rgba(141, 130, 255, 0) 100%
+  );
+
+  &.cl05 {
+    top: 550px;
+    width: 633px;
+    transform: translateX(-900px) scale(1, -1) rotate(186deg);
+  }
+
+  &.cl06 {
+    top: 310px;
+    width: 566px;
+    transform: translateX(clamp(786px, 35.625vw, 684px)) rotate(5deg);
+  }
+
+  &.cl07 {
+    width: 566px;
+    top: 1220px;
+    transform: translateX(310px) scale(1, -1) rotate(-150deg);
+  }
+
+  &.cl08 {
+    top: 1740px;
+    width: 374px;
+    transform: translateX(-1000px) rotate(-22deg);
+  }
+
+  &.cl09 {
+    top: 176px;
+    width: 374px;
+    transform: translateX(-472px) rotate(17deg);
+  }
+
+  &.cl10 {
+    top: 86px;
+    width: 584px;
+    transform: translateX(710px) scale(1, -1) rotate(165deg);
+  }
+
+  &.cl11 {
+    top: 456px;
+    width: 474px;
+    transform: translateX(-822px) rotate(-3deg);
+  }
+
+  &.cl12 {
+    top: 1010px;
+    width: 345px;
+    transform: translateX(280px) scale(1, -1) rotate(-175deg);
+  }
+
+  &.cl13 {
+    bottom: 35px;
+    width: 345px;
+    transform: translateX(-380px) rotate(5deg);
+  }
+}
+
 .logo3D {
   position: absolute;
   opacity: 0.1;
@@ -407,16 +474,17 @@ button:hover .arrow2 {
     width: 584px;
     height: 433px;
     transform: translateX(710px) scale(1, -1) rotate(165deg);
-    z-index: 0;
+    z-index: 1;
   }
 
   &.l11 {
-    top: 656px;
+    top: 556px;
     width: 474px;
     height: 351px;
     transform: translateX(-822px) rotate(-3deg);
     z-index: 0;
   }
+
   &.l12 {
     top: 1010px;
     width: 345px;
@@ -424,6 +492,7 @@ button:hover .arrow2 {
     transform: translateX(280px) scale(1, -1) rotate(-175deg);
     z-index: 0;
   }
+
   &.l13 {
     bottom: 35px;
     width: 345px;
@@ -485,6 +554,7 @@ nav ul a.invert-color {
 }
 
 .cardsWrap {
+  z-index: 2;
   perspective: 1500px;
   padding: 0px 128px;
   height: 426px;
@@ -507,6 +577,17 @@ nav ul a.invert-color {
   width: 100%;
   box-shadow: var(--shadowHigh);
   border-radius: 16px;
+  background-color: var(--purplePlateBG);
+  .card {
+    background: none;
+    z-index: 4;
+  }
+
+  &.noise {
+    &::after {
+      transform-style: preserve-3d;
+    }
+  }
 }
 
 .card {
@@ -614,9 +695,11 @@ nav ul a.invert-color {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+  z-index: 3;
 }
 
 .Tag {
+  z-index: 3;
   padding: 10px 25px;
   background-color: var(--purpleItems);
   border: var(--stroke1pxStrong);
@@ -872,6 +955,7 @@ nav ul a.invert-color {
 .msgBig,
 .msgBig .ms04,
 .emojiMsg {
+  z-index: 3;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -946,6 +1030,7 @@ a.typeWriterLink .typeWriter {
 .typeWriterLink:focus,
 .typeWriterLink:hover {
   text-decoration: none !important;
+  z-index: 3;
 }
 
 @keyframes shakePop {
@@ -1279,6 +1364,7 @@ section.purple.second {
   }
   h2 {
     margin-top: 176px;
+    z-index: 2;
   }
 
   .cardsWrap {
@@ -1494,7 +1580,6 @@ section.footer {
   display: inline-flex;
   overflow: hidden;
   height: 1em;
-  gap: 0.05em;
 }
 
 .rolling span {

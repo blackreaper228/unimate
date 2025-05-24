@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(wrapper);
   });
 
-  // Отдельно ещё раз на rolling-img (если напрямую в DOM)
+  // rolling-img
   document.querySelectorAll(".rolling-img").forEach((el) => {
     observer.observe(el);
   });
@@ -44,20 +44,25 @@ document.addEventListener("DOMContentLoaded", () => {
   function animateRolling(wrapper) {
     const spans = wrapper.querySelectorAll("span");
 
-    spans.forEach((span) => {
+    spans.forEach((span, index) => {
       const finalChar = span.dataset.final;
 
       if (/\d/.test(finalChar)) {
         const block = document.createElement("div");
-        block.style.transition = "transform 1s ease";
+        block.style.transition = "transform 2.5s ease";
         block.style.display = "block";
+        block.style.lineHeight = "1em";
 
-        for (let i = 0; i <= 9; i++) {
+        // Генерируем случайное число строк от 20 до 40 для каждого span
+        const rollCount = Math.floor(Math.random() * 20) + 20;
+
+        for (let i = 0; i < rollCount; i++) {
           const line = document.createElement("div");
-          line.textContent = i;
+          line.textContent = Math.floor(Math.random() * 10); // случайная цифра
           block.appendChild(line);
         }
 
+        // Добавляем финальный символ
         const finalLine = document.createElement("div");
         finalLine.textContent = finalChar;
         block.appendChild(finalLine);
@@ -65,14 +70,14 @@ document.addEventListener("DOMContentLoaded", () => {
         span.appendChild(block);
 
         requestAnimationFrame(() => {
-          block.style.transform = `translateY(-10em)`;
+          block.style.transform = `translateY(-${rollCount}em)`;
         });
       } else {
         span.textContent = finalChar;
         span.style.opacity = 0;
         span.style.transform = "scale(0.8)";
         span.style.display = "inline-block";
-        span.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+        span.style.transition = "opacity 1s ease, transform 1s ease";
 
         requestAnimationFrame(() => {
           span.style.opacity = 1;
@@ -88,7 +93,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!icon) return;
 
     const iconHeight = icon.clientHeight || 60;
-    const indexToStopAt = 6; // индекс элемента, на котором нужно остановиться (0-based)
+    const indexToStopAt = 6;
+
+    // Добавим плавность, если вдруг не в CSS
+    span.style.transition = "transform 2s ease";
 
     requestAnimationFrame(() => {
       span.style.transform = `translateY(-${iconHeight * indexToStopAt}px)`;
