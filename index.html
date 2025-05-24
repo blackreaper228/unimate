@@ -77,12 +77,6 @@
     <meta property="og:site_name" content="Unimate" />
   </head>
   <body>
-    <!-- <form id="upload-form">
-      <input type="text" name="name" placeholder="Имя" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <input type="file" name="file" required />
-      <button type="submit">Загрузить</button>
-    </form> -->
     <nav class="noise">
       <div class="hover-marker"></div>
       <ul>
@@ -95,6 +89,9 @@
         <li><a href="#forms">Оставить заявку</a></li>
       </ul>
     </nav>
+    <div class="loader">
+      <div class="circle"></div>
+    </div>
     <section class="firstScreenSec">
       <img
         class="logo3D l01"
@@ -545,7 +542,7 @@
         <p class="small">
           Перед отправкой работа проходит двухэтапную проверку: мы сверяем
           её с заданием, проверяем уникальность, наличие ИИ‑контента и скрытых
-          символов. Это позволяет отправить работу, полностью соответствующий
+          символов. Это позволяет отправить работу, полностью соответствующую
           требованиям. При отклонениях работа уходит на доработку ещё до того,
           как попадает к вам.
         </p>
@@ -674,7 +671,7 @@
       <div class="cardsWrap">
         <div class="overlay noise s16px" id="overlay">
           <div class="card ono">
-            <h1>400+</h1>
+            <h1>3000+</h1>
             <h3>Выполнено работ</h3>
           </div>
         </div>
@@ -804,8 +801,11 @@
                 </div>
               </div>
               <p class="small">
-                «Помогли с билетами для экзамена по финансовому менеджменту,
-                планирую обращаться в будущем»
+                «Помогли с билетами для экзамена по финансовому менеджменту,
+                несмотря на огромное количество вопросов и короткий дедлайн.
+                Скинулись группой и получили крутой результат! Автор использовал
+                источники, которые рекомендовал преподаватель, расписал все ёмко
+                и понятно.»
               </p>
             </div>
           </div>
@@ -986,8 +986,11 @@
                 </div>
               </div>
               <p class="small">
-                «Помогли с билетами для экзамена по финансовому менеджменту,
-                планирую обращаться в будущем»
+                «Помогли с билетами для экзамена по финансовому менеджменту,
+                несмотря на огромное количество вопросов и короткий дедлайн.
+                Скинулись группой и получили крутой результат! Автор использовал
+                источники, которые рекомендовал преподаватель, расписал все ёмко
+                и понятно.»
               </p>
             </div>
           </div>
@@ -1170,8 +1173,11 @@
                 </div>
               </div>
               <p class="small">
-                «Помогли с билетами для экзамена по финансовому менеджменту,
-                планирую обращаться в будущем»
+                «Помогли с билетами для экзамена по финансовому менеджменту,
+                несмотря на огромное количество вопросов и короткий дедлайн.
+                Скинулись группой и получили крутой результат! Автор использовал
+                источники, которые рекомендовал преподаватель, расписал все ёмко
+                и понятно.»
               </p>
             </div>
           </div>
@@ -1352,8 +1358,11 @@
                 </div>
               </div>
               <p class="small">
-                «Помогли с билетами для экзамена по финансовому менеджменту,
-                планирую обращаться в будущем»
+                «Помогли с билетами для экзамена по финансовому менеджменту,
+                несмотря на огромное количество вопросов и короткий дедлайн.
+                Скинулись группой и получили крутой результат! Автор использовал
+                источники, которые рекомендовал преподаватель, расписал все ёмко
+                и понятно.»
               </p>
             </div>
           </div>
@@ -1451,124 +1460,104 @@
         <div class="footerCase">
           <div class="or">или</div>
         </div>
-        <div class="formsWindow">
-          <div class="formsWrap">
-            <div class="fromsWrapRow">
-              <div class="formInputWrap Short">
-                <label for="name">Имя</label>
-                <input id="name" type="text" placeholder="Иван" />
+        <form id="formUpload">
+          <div class="formsWindow">
+            <div class="formsWrap">
+              <div class="fromsWrapRow">
+                <div class="formInputWrap Short">
+                  <label for="name">Имя<span>*</span></label>
+                  <input id="name" type="text" placeholder="Иван" required />
+                </div>
+                <div class="formInputWrap Short dropDown">
+                  <label for="workType">Тип работы</label>
+                  <select name="workType" id="workType"></select>
+                </div>
               </div>
-              <div class="formInputWrap Short">
-                <label for="workType">Тип работы</label>
-                <select name="workType" id="workType">
-                  <option value="">Диплом</option>
-                  <option value="design">Курсовая</option>
-                  <option value="economics">Магистерская диссертация</option>
-                  <option value="programming">
-                    РАР (Расчетно-аналитическая работа)
-                  </option>
-                  <option value="programming">Презентация</option>
-                  <option value="programming">Эссе</option>
-                  <option value="programming">Реферат</option>
-                  <option value="programming">Домашняя работа</option>
-                  <option value="programming">Билеты к экзамену</option>
-                  <option value="programming">Контрольная работа</option>
-                  <option value="programming">Зачет</option>
-                  <option value="programming">Экзамен</option>
-                  <option value="programming">Репетиторство</option>
-                  <option value="programming">Микронаушник</option>
-                </select>
-              </div>
-            </div>
-            <div class="formInputWrap">
-              <label for="contact">Контакт для связи*</label>
-              <input
-                id="contact"
-                type="text"
-                placeholder="t.me/black_reaper228"
-              />
-            </div>
-            <div class="formInputWrap">
-              <label for="topic">Тема работы</label>
-              <input
-                type="text"
-                id="topic"
-                placeholder="Права женщин в эпоху индустриализации"
-              />
-            </div>
-            <div class="fromsWrapRow">
+
               <div class="formInputWrap">
-                <label for="size">Объём работы</label>
-                <input id="size" type="text" placeholder="2500 слов" />
+                <label for="contact">Контакт для связи<span>*</span></label>
+                <input
+                  id="contact"
+                  type="text"
+                  placeholder="t.me/black_reaper228"
+                  required
+                />
               </div>
-              <div class="formInputWrap">
-                <label for="deadline">Дедлайн</label>
-                <input type="datetime-local" id="deadline" name="deadline" />
-              </div>
-            </div>
-            <div class="formInputWrap">
-              <label for="deadline"
-                >Структура работы (количество глав и т.д.)</label
-              >
-              <textarea
-                name="workStructure"
-                id="structure"
-                placeholder="Титульный лист, содержание, сокращения, введение..."
-              ></textarea>
-            </div>
-            <div class="formInputWrap">
-              <label for="deadline"
-                >Оригинальность (уточните, входит ли цитирование в
-                оригинальность)</label
-              >
-              <input
-                id="originality"
-                type="text"
-                placeholder="Оригинальность не важна"
-              />
-            </div>
-            <div class="formInputWrap">
-              <label for="deadline">Дополнительные пожелания / материалы</label>
-              <textarea
-                name="optionalCommentary"
-                id="optional"
-                placeholder="Структура работы..."
-              ></textarea>
+
+              <!-- Динамически заменяемая часть формы -->
+              <div class="formWrapType" id="formWrapType"></div>
+
+              <button type="submit" id="submit">
+                Отправить
+                <span class="arrowWrap">
+                  <img
+                    class="arrow arrow1"
+                    src="./src/images/svg/arrow.svg"
+                    alt="Иконка стрелки"
+                  />
+                  <img
+                    class="arrow arrow2"
+                    src="./src/images/svg/arrow.svg"
+                    alt="Иконка стрелки"
+                  />
+                </span>
+              </button>
             </div>
           </div>
-          <button>
-            Отправить
-            <span class="arrowWrap">
-              <img
-                class="arrow arrow1"
-                src="./src/images/svg/arrow.svg"
-                alt="Иконка стрелки"
-              />
-              <img
-                class="arrow arrow2"
-                src="./src/images/svg/arrow.svg"
-                alt="Иконка стрелки"
-              />
-            </span>
-          </button>
-        </div>
-        <div class="tgModal">
-          <p>Напишете нам напрямую в Телеграме!</p>
-          <a class="button" href="https://t.me/unimate1">
-            Написать нам
-            <span class="arrowWrap">
-              <img
-                class="arrow arrow1"
-                src="./src/images/svg/arrow.svg"
-                alt="Иконка стрелки"
-              />
-              <img
-                class="arrow arrow2"
-                src="./src/images/svg/arrow.svg"
-                alt="Иконка стрелки"
-              />
-            </span>
-          </a>
+        </form>
+        <div class="tgModalWrap">
+          <div class="tgModal">
+            <p>Напишете нам напрямую в Телеграме!</p>
+            <a class="button" href="https://t.me/unimate1">
+              Написать нам
+              <span class="arrowWrap">
+                <img
+                  class="arrow arrow1"
+                  src="./src/images/svg/arrow.svg"
+                  alt="Иконка стрелки"
+                />
+                <img
+                  class="arrow arrow2"
+                  src="./src/images/svg/arrow.svg"
+                  alt="Иконка стрелки"
+                />
+              </span>
+            </a>
+          </div>
+          <svg class="flight-path" viewBox="0 0 556 409">
+            <defs>
+              <mask id="pathRevealMask">
+                <!-- рисующаяся линия-маска -->
+                <path
+                  id="maskPath"
+                  d="M444.17 186.419C592.183 208.409 577.69 349.347 477.174 392.827C376.658 436.308 244.143 373.336 244.143 290.872C244.143 208.409 349.521 180.683 353.656 290.872C357.79 401.061 181.139 412.819 96.1268 369.338C11.1151 325.857 -90.1063 149.935 159.921 2"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="12"
+                  stroke-linecap="round"
+                  stroke-dasharray="1000"
+                  stroke-dashoffset="1000"
+                />
+              </mask>
+            </defs>
+
+            <!-- сам путь, который виден -->
+            <path
+              d="M444.17 186.419C592.183 208.409 577.69 349.347 477.174 392.827C376.658 436.308 244.143 373.336 244.143 290.872C244.143 208.409 349.521 180.683 353.656 290.872C357.79 401.061 181.139 412.819 96.1268 369.338C11.1151 325.857 -90.1063 149.935 159.921 2"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-dasharray="21 21"
+              mask="url(#pathRevealMask)"
+              fill="none"
+            />
+          </svg>
+
+          <img
+            class="plane"
+            src="./src/images/plane.png"
+            alt="Бумажный самолётик"
+          />
         </div>
       </div>
     </section>

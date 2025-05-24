@@ -5,8 +5,7 @@ import "./stylesheets/vars.css";
 import "./stylesheets/style.css";
 import "./stylesheets/typekit.css";
 
-// import "./js/form.js";
-// import "./js/scroll.js";
+import "./js/form.js";
 import "./js/navbar.js";
 import "./js/backgroundAnim.js";
 import "./js/typewriter.js";
@@ -17,3 +16,4 @@ import "./js/carousel.js";
 import "./js/maqueeReviews.js";
 import "./js/scrollTo.js";
 import "./js/rolling.js";
+import "./js/plane.js";
