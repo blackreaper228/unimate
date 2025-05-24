@@ -337,6 +337,7 @@ button:hover .arrow2 {
     height: 128px;
     transform: translateX(clamp(786px, 35.625vw, 684px)) rotate(5deg);
     /* transform: translateX(684px); */
+    z-index: 0;
   }
 
   &.l02 {
@@ -359,6 +360,76 @@ button:hover .arrow2 {
     height: 248px;
     /* transform: translateX(961px) rotate(16deg); */
     transform: translateX(-840px) scale(1, -1) rotate(186deg);
+  }
+
+  &.l05 {
+    top: 604px;
+    width: 633px;
+    height: 469px;
+    transform: translateX(-1000px) scale(1, -1) rotate(186deg);
+    z-index: 0;
+  }
+
+  &.l06 {
+    top: 370px;
+    width: 584px;
+    height: 433px;
+    transform: translateX(780px) rotate(5deg);
+    z-index: 0;
+  }
+
+  &.l07 {
+    top: 1220px;
+    width: 584px;
+    height: 433px;
+    transform: translateX(310px) scale(1, -1) rotate(-150deg);
+    z-index: 0;
+  }
+
+  &.l08 {
+    top: 1770px;
+    width: 374px;
+    height: 276px;
+    transform: translateX(-1000px) rotate(-22deg);
+    z-index: 0;
+  }
+
+  &.l09 {
+    top: 176px;
+    width: 374px;
+    height: 276px;
+    transform: translateX(-472px) rotate(17deg);
+    z-index: 0;
+  }
+
+  &.l10 {
+    top: 86px;
+    width: 584px;
+    height: 433px;
+    transform: translateX(710px) scale(1, -1) rotate(165deg);
+    z-index: 0;
+  }
+
+  &.l11 {
+    top: 656px;
+    width: 474px;
+    height: 351px;
+    transform: translateX(-822px) rotate(-3deg);
+    z-index: 0;
+  }
+  &.l12 {
+    top: 1010px;
+    width: 345px;
+    height: 256px;
+    transform: translateX(280px) scale(1, -1) rotate(-175deg);
+    z-index: 0;
+  }
+  &.l13 {
+    bottom: 35px;
+    width: 345px;
+    height: 256px;
+    transform: translateX(-380px) rotate(5deg);
+    z-index: 0;
   }
 }
 
