@@ -54,5 +54,34 @@ function updateEffects(e) {
   updateTilt(e);
 }
 
-window.addEventListener("mousemove", updateEffects);
-window.addEventListener("mouseleave", resetTilt);
+// Управление активацией эффектов
+let effectsEnabled = false;
+
+function enableEffects() {
+  if (!effectsEnabled) {
+    window.addEventListener("mousemove", updateEffects);
+    window.addEventListener("mouseleave", resetTilt);
+    effectsEnabled = true;
+  }
+}
+
+function disableEffects() {
+  if (effectsEnabled) {
+    window.removeEventListener("mousemove", updateEffects);
+    window.removeEventListener("mouseleave", resetTilt);
+    resetTilt();
+    effectsEnabled = false;
+  }
+}
+
+function checkViewport() {
+  if (window.innerWidth >= 469) {
+    enableEffects();
+  } else {
+    disableEffects();
+  }
+}
+
+// Инициализация
+checkViewport();
+window.addEventListener("resize", checkViewport);

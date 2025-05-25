@@ -1,0 +1,468 @@
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1440px) {
+}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+}
+
+@media only screen and (min-device-width: 469px) and (max-device-width: 768px) {
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 468px) {
+  :root {
+    --roundCorners16px: 10px;
+    --roundCorners24px: 16px;
+    --roundCorners8px: 6px;
+  }
+
+  section.firstScreenSec {
+    height: 90vh;
+  }
+
+  nav {
+    display: none;
+  }
+
+  h1 {
+    font-size: 12.214vw;
+    letter-spacing: 0px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  p.small {
+    font-size: 16px;
+  }
+
+  .marqueeBlock {
+    margin-top: 32px;
+  }
+
+  .marquee {
+    gap: 16px;
+  }
+
+  .marqueeInner {
+    gap: 16px;
+  }
+
+  .emojiMarquee {
+    width: 32px;
+  }
+
+  .firstScreen {
+    p {
+      max-width: 306px;
+    }
+  }
+
+  .cursor {
+    height: 46px;
+    width: 4px;
+    margin-bottom: -4px;
+    margin-left: 2px;
+  }
+
+  a.button {
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  button {
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .arrowWrap {
+    width: 42px;
+  }
+
+  .arrow {
+    top: 1px;
+    left: 14px;
+    width: 14px;
+    transition: transform 0.3s ease;
+  }
+
+  .logo3D {
+    &.l01 {
+      top: 110px;
+      width: 100px;
+      height: 70px;
+      transform: translateX(120px) rotate(19deg);
+      z-index: 0;
+    }
+
+    &.l02 {
+      top: 70px;
+      width: 260px;
+      height: 179px;
+      transform: translateX(-230px) scale(1, -1) rotate(152deg);
+      z-index: 0;
+    }
+
+    &.l03 {
+      top: auto;
+      bottom: -110px;
+      width: 358px;
+      height: 246px;
+      transform: translateX(80px) rotate(-8deg);
+      z-index: 0;
+    }
+  }
+
+  .cardsWrap {
+    flex-direction: column;
+    padding: 0px 16px;
+    height: auto;
+    gap: 32px;
+    margin-top: 74px;
+
+    .overlay {
+      .card {
+        min-height: 284px;
+      }
+    }
+  }
+
+  .Tag {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+
+  .card {
+    padding: 20px;
+    gap: 72px;
+  }
+
+  .TagsWrap {
+    padding-right: 40px;
+    gap: 9px;
+  }
+
+  .noise {
+    &.s16px {
+      &:after {
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .cardIcon {
+    width: 90px;
+  }
+
+  .cardIconImg {
+    &.cI01 {
+      right: -25px;
+      width: 88px;
+      height: 94px;
+    }
+
+    &.cI02 {
+      top: 5px;
+      right: -3px;
+      width: 110px;
+      height: 110px;
+    }
+
+    &.cI03 {
+      top: -12px;
+      right: -35px;
+      width: 110px;
+      height: 110px;
+    }
+  }
+
+  .cardIcon {
+    &.c02 {
+      top: -12px;
+      right: 24px;
+      transform: rotate(15.07deg);
+    }
+
+    &.c03 {
+      top: 0px;
+      right: 5px;
+      transform: rotate(-18.51deg);
+    }
+  }
+
+  .how {
+    height: 700px;
+  }
+
+  .howBlock {
+    margin-top: 74px;
+    margin-bottom: 52px;
+    padding: 0px 16px;
+
+    .rightSide {
+      display: none;
+    }
+  }
+
+  .step.active {
+    padding: 20px;
+  }
+
+  .archSec {
+    h2 {
+      padding: 0px 16px;
+      text-align: center;
+    }
+  }
+
+  .whiteTrans {
+    width: 48px;
+  }
+
+  .archDesc {
+    p.small {
+      max-width: 306px;
+    }
+  }
+
+  .arch {
+    bottom: 350px;
+    width: 1000px;
+  }
+
+  .carouselPic {
+    &.msk01 {
+      top: 8px;
+      left: 30px;
+      width: 84px;
+      height: 108px;
+      transform: rotate(85deg);
+    }
+
+    &.msk02 {
+      top: 20px;
+      left: 30px;
+      width: 76px;
+      height: 93px;
+      transform: rotate(98deg);
+    }
+
+    &.msk03 {
+      top: 10px;
+      left: 30px;
+      width: 80px;
+      height: 98px;
+      transform: rotate(93deg);
+    }
+
+    &.msk04 {
+      top: 10px;
+      left: 26px;
+      width: 74px;
+      height: 94px;
+      transform: rotate(90deg);
+    }
+
+    &.msk05 {
+      top: 16px;
+      left: 20px;
+      width: 84px;
+      height: 90px;
+      transform: rotate(90deg);
+    }
+
+    &.msk06 {
+      top: 22px;
+      left: 18px;
+      width: 93px;
+      height: 84px;
+      transform: rotate(90deg);
+    }
+  }
+
+  section.purple.second {
+    h1 {
+      font-size: 86px;
+    }
+  }
+
+  .rolling-img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .rolling-img img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+  }
+
+  .prupleTrans {
+    display: none;
+  }
+
+  .marqueeCardsOutie {
+    margin-top: 74px;
+    margin-bottom: 132px;
+
+    padding: 0px 16px;
+    gap: 32px;
+    .marqueeCards {
+      display: none;
+    }
+  }
+
+  .mobileShow {
+    display: flex;
+  }
+
+  .formsBG {
+    width: calc(100% - 32px);
+    max-width: 1664px;
+    border-radius: 10px;
+    margin-bottom: 72px;
+    padding: 20px;
+    flex-direction: column;
+    gap: 500px;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .tgModalWrap {
+    margin-right: 0;
+    margin-bottom: 128px;
+  }
+
+  .flight-path {
+    position: absolute;
+    top: -130px;
+    left: -104px;
+    z-index: -1;
+    height: 409px;
+  }
+
+  .plane {
+    top: -130px;
+    left: -104px;
+  }
+
+  .footerCase {
+    width: 112px;
+    border-radius: 20px;
+    bottom: 575px;
+    top: auto;
+  }
+
+  .or {
+    font-size: 84px;
+  }
+
+  .fromsWrapRow {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .formInputWrap.Short {
+    width: 100%;
+    max-width: none;
+  }
+
+  .formInputWrap.Short.dropDown {
+    margin-top: 26px;
+  }
+
+  .upload {
+    padding: 12px;
+  }
+
+  .formsHeader {
+    p {
+      max-width: 300px;
+    }
+  }
+
+  section.archSec {
+    height: 70dvh;
+    h2 {
+      top: 74px;
+    }
+  }
+
+  section.footer {
+    flex-direction: column;
+    width: calc(100% - 32px);
+    justify-content: space-between;
+    margin-bottom: 74px;
+    gap: 96px;
+
+    p {
+      font-weight: 700;
+      background: var(
+        --purpleGr,
+        linear-gradient(103deg, #ded6f9 -55.46%, #5e3add 91.06%)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .footerContactsWrap {
+    order: 2;
+  }
+
+  .footerLogo {
+    order: 1;
+    width: 100%;
+    height: auto;
+  }
+
+  .footerContactsWrapLeft {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerContactsWrapRight {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerContactsWrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    p {
+      font-size: 24px;
+    }
+  }
+
+  label {
+    font-size: 3.562vw;
+  }
+
+  .radio-group {
+    flex-direction: column;
+  }
+
+  .how {
+    height: 200vw;
+  }
+}
+
+@media only screen and (max-device-width: 359px) {
+}

@@ -1127,7 +1127,8 @@ section.archSec {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 1034px;
+  height: 100vh;
+  min-height: 1034px;
 
   h2 {
     top: 176px;
@@ -1383,13 +1384,18 @@ section.purple.second {
 }
 
 .marqueeCardsOutie {
+  gap: 20px;
   width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-bottom: 150px;
+  margin-top: 90px;
 
   overflow: hidden;
   position: relative;
+
+  filter: drop-shadow(0px 16px 31.3px rgba(63, 29, 255, 0.25));
 }
 
 .marqueeCards .overlay {
@@ -2087,4 +2093,33 @@ button:hover .arrow1 {
 a.button:hover .arrow2,
 button:hover .arrow2 {
   transform: translateX(0);
+}
+
+section.results {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  height: auto;
+}
+
+nav a.invert-color {
+  color: #9f75ff !important;
+}
+
+nav a.marker-visible {
+  color: white !important;
+}
+
+.mobileShow {
+  display: none;
+}
+
+section.purple.second {
+  & .marqueeCardsOutie {
+    .overlay {
+      box-shadow: none;
+    }
+  }
 }

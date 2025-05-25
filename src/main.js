@@ -4,6 +4,7 @@ import "./stylesheets/basics.css";
 import "./stylesheets/vars.css";
 import "./stylesheets/style.css";
 import "./stylesheets/typekit.css";
+import "./stylesheets/responsive.css";
 
 import "./js/form.js";
 import "./js/navbar.js";

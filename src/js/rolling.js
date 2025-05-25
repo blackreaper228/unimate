@@ -92,10 +92,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const icon = span.querySelector("img");
     if (!icon) return;
 
-    const iconHeight = icon.clientHeight || 60;
+    // Используем разные высоты в зависимости от ширины экрана
+    const isMobile = window.innerWidth < 469;
+    const iconHeight = isMobile ? 36 : 68; // или любые твои реальные размеры
     const indexToStopAt = 6;
 
-    // Добавим плавность, если вдруг не в CSS
     span.style.transition = "transform 2s ease";
 
     requestAnimationFrame(() => {
