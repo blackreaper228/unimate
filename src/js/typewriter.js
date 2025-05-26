@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "рефератами",
     "пересдачами",
     "зачетами",
-    "статьями",
   ];
   const typingSpeed = 100; // скорость печати
   const deletingSpeed = 60; // скорость удаления
