@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ? "transform 0.6s ease, background-color 0.6s ease"
         : "none";
 
-      const translateX = window.innerWidth < 469 ? 2900 : 2800;
+      const translateX = window.innerWidth < 769 ? 2900 : 2800;
       icon.style.transform = `rotate(${pos.angle}deg) translate(${translateX}px) scale(${pos.scale})`;
 
       if (pos.scale === 1) {

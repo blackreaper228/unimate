@@ -735,6 +735,7 @@ nav ul a.invert-color {
   justify-content: space-between;
   width: 100%;
   max-width: 1920px;
+  gap: 80px;
 }
 
 .leftSide {
@@ -1229,7 +1230,27 @@ section.archSec {
   width: 800px;
   height: 588px;
   background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 9999999;
+  z-index: 2;
+}
+
+.archSec {
+  .cardIcon {
+    z-index: 1;
+  }
+}
+
+section.archSec {
+  h2 {
+    text-align: center;
+  }
+}
+
+.sliderArrowsWrap {
+  z-index: 3;
+}
+
+.archDesc {
+  z-index: 3;
 }
 
 .prupleTrans {
@@ -2121,5 +2142,53 @@ section.purple.second {
     .overlay {
       box-shadow: none;
     }
+  }
+}
+
+.card {
+  h3 {
+    padding-right: 140px;
+  }
+}
+
+.Tag {
+  vertical-align: middle;
+}
+
+.cardsWrap {
+  .overlay:nth-child(3) {
+    .card {
+      padding-right: 3.5vw;
+    }
+  }
+}
+
+section.results {
+  overflow: visible;
+}
+
+.reviewHeaderTextWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h3 {
+    padding-right: 0px;
+  }
+}
+
+.startPurple {
+  margin-top: 176px;
+  text-align: center;
+}
+
+.h1_flexWrap {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .h1_flex:nth-child(2) {
+    margin-left: 24px;
+    margin-right: 24px;
   }
 }

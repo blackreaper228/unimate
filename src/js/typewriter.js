@@ -1,6 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
   const wordElement = document.querySelector(".word");
-  const words = ["курсовыми", "дипломами", "домашками"];
+  const words = [
+    "курсовыми",
+    "дипломами",
+    "эссе",
+    "экзаменами",
+    "тестами",
+    "рефератами",
+    "пересдачами",
+    "зачетами",
+    "статьями",
+  ];
   const typingSpeed = 100; // скорость печати
   const deletingSpeed = 60; // скорость удаления
   const pauseTime = 2000; // пауза после слова

@@ -640,7 +640,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".loader")?.classList.add("active");
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbwoXi3exInjtskLo8Y7i_BqSB5nAXYTmz8iAPvatWxWtUC36IsTQ03sBOesVo9Qg0QFEw/exec",
+      "https://script.google.com/macros/s/AKfycbxcN9Uijcx5n2Uu_k9OptbTXCk3BqXYiKS8lfJrCNoOYuLX90Kfg2ykylK-XPZEDYQf/exec",
       {
         method: "POST",
         body: data,
