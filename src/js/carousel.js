@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     { angle: -125, scale: 0.4 },
     { angle: -115, scale: 0.5 },
     { angle: -105, scale: 0.6 },
-    { angle: -98.5, scale: 0.7 },
-    { angle: -90, scale: 1 },
-    { angle: -81.5, scale: 0.7 },
+    { angle: -98.5, scale: 0.7 }, // левая активная
+    { angle: -90, scale: 1 }, // центральная
+    { angle: -81.5, scale: 0.7 }, // правая активная
     { angle: -75, scale: 0.6 },
     { angle: -65, scale: 0.5 },
     { angle: -55, scale: 0.4 },
@@ -48,6 +48,33 @@ document.addEventListener("DOMContentLoaded", () => {
         icon.style.backgroundColor = "#cac3ff";
       } else {
         icon.style.backgroundColor = "#e1ddff";
+      }
+
+      // Добавляем обработчики клика только для видимых (активных) иконок
+      icon.style.cursor = isVisible ? "pointer" : "default";
+
+      // Очистка обработчиков, чтобы не навешивались многократно
+      icon.onclick = null;
+      if (pos.scale === 0.7) {
+        // Левая иконка — сдвигаем назад
+        if (pos.angle === -98.5) {
+          icon.onclick = () => {
+            offset = (offset - 1 + icons.length) % icons.length;
+            updateDesc(currentDesc - 1);
+            render();
+          };
+        }
+        // Правая иконка — сдвигаем вперед
+        else if (pos.angle === -81.5) {
+          icon.onclick = () => {
+            offset = (offset + 1) % icons.length;
+            updateDesc(currentDesc + 1);
+            render();
+          };
+        }
+      } else {
+        // Для остальных иконок клика нет
+        icon.style.pointerEvents = isVisible ? "auto" : "none";
       }
     });
   }

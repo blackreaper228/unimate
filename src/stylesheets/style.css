@@ -1224,6 +1224,8 @@ section.archSec {
 }
 
 .whiteTrans {
+  user-select: none;
+  pointer-events: none;
   bottom: 50px;
   position: absolute;
   right: 0;
