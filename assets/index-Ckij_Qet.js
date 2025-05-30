@@ -277,7 +277,7 @@
         <div class="fromsWrapRow">
           <div class="formInputWrap">
             <label for="size">Количество заданий<span>*</span></label>
-            <input required id="size" type="text" placeholder="6" />
+            <input required id="size" type="text" placeholder="5 заданий" />
           </div>
           <div class="formInputWrap">
             <label for="time">Длительность экзамена<span>*</span></label>
@@ -321,11 +321,11 @@
         <div class="fromsWrapRow">
           <div class="formInputWrap">
             <label for="size">Количество заданий<span>*</span></label>
-            <input required id="size" type="text" placeholder="1.5 часа" />
+            <input required id="size" type="text" placeholder="5 заданий" />
           </div>
           <div class="formInputWrap">
             <label for="time">Длительность работы*<span>*</span></label>
-            <input required id="time" type="text" placeholder="6" />
+            <input required id="time" type="text" placeholder="1,5 часа" />
           </div>
         </div>
         <div class="formInputWrap">
