@@ -957,6 +957,12 @@
     letter-spacing: 0px;
   }
 
+  .overlay {
+    h1 {
+      font-size: 80px;
+    }
+  }
+
   .cursor {
     height: 10vw;
     width: 0.6vw;
@@ -966,7 +972,7 @@
   }
 }
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 468px) {
+@media only screen and (max-device-width: 468px) {
   :root {
     --roundCorners16px: 10px;
     --roundCorners24px: 16px;
@@ -1151,7 +1157,7 @@
 
     &.c03 {
       top: 0px;
-      right: 5px;
+      right: 22px;
       transform: rotate(-18.51deg);
     }
   }
@@ -1353,6 +1359,8 @@
     h2 {
       top: 74px;
     }
+
+    min-height: 934px;
   }
 
   section.footer {
@@ -1430,7 +1438,48 @@
   .marqueeBlock {
     margin-top: 84px;
   }
-}
 
-@media only screen and (max-device-width: 359px) {
+  .services {
+    margin-top: 96px;
+  }
+
+  .startPurple {
+    margin-top: 96px;
+  }
+
+  .cardsWrap {
+    margin-bottom: 96px;
+  }
+
+  section.purple.second {
+    h2 {
+      margin-top: 96px;
+      z-index: 2;
+    }
+  }
+
+  .formsHeader {
+    margin-top: 96px;
+  }
+
+  .formsBG {
+    gap: 404px;
+  }
+
+  .footerCase {
+    bottom: 504px;
+  }
+
+  .plane {
+    scale: 0.8;
+    translate: 54px 20px;
+    top: -120px;
+    left: -124px;
+  }
+
+  .flight-path {
+    scale: 0.8;
+    top: -120px;
+    left: -124px;
+  }
 }
