@@ -709,15 +709,23 @@ document.addEventListener("DOMContentLoaded", () => {
       fileItem.style.margin = "2px 0";
       fileItem.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
       fileItem.style.borderRadius = "4px";
+      fileItem.style.width = "100%";
+      fileItem.style.boxSizing = "border-box";
 
       const fileName = document.createElement("p");
       fileName.textContent = file.name;
-      fileName.style.flex = "1";
+      fileName.style.flex = "1 1 0";
+      fileName.style.minWidth = "0";
       fileName.style.margin = "0";
       fileName.style.fontWeight = "600";
       fileName.style.lineHeight = "130%";
       fileName.style.fontFamily = "Manrope";
       fileName.style.color = "var(--white)";
+      fileName.style.whiteSpace = "nowrap";
+      fileName.style.overflow = "hidden";
+      fileName.style.textOverflow = "ellipsis";
+      fileName.style.maxWidth = "100%";
+      fileName.title = file.name;
 
       const removeBtn = document.createElement("button");
       removeBtn.textContent = "×";

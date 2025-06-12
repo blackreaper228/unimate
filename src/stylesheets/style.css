@@ -2213,3 +2213,13 @@ section.results {
   max-width: 100%; /* Ограничить ширину контейнера */
   display: block; /* На всякий случай */
 }
+
+.upload {
+  div {
+    white-space: nowrap; /* Запретить перенос строк */
+    overflow: hidden; /* Скрыть выходящий за пределы текст */
+    text-overflow: ellipsis; /* Добавить троеточие */
+    max-width: 90%; /* Ограничить ширину контейнера */
+    display: block; /* На всякий случай */
+  }
+}
