@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="formInputWrap">
           <label for="originality">Оригинальность (уточните, входит ли цитирование в оригинальность)<span>*</span></label>
-          <input required id="originality" type="text" placeholder="Оригинальность не важна" />
+          <input required id="originality" type="text" placeholder="Нет требований по оригинальности / 70% (с учетом цитирования)" />
         </div>
         <div class="formInputWrap">
           <label for="optional">Дополнительные пожелания / материалы</label>
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="formInputWrap">
           <label for="originality">Оригинальность (уточните, входит ли цитирование в оригинальность)<span>*</span></label>
-          <input required id="originality" type="text" placeholder="Оригинальность не важна" />
+          <input required id="originality" type="text" placeholder="Нет требований по оригинальности / 70% (с учетом цитирования)" />
         </div>
         <div class="formInputWrap">
           <label for="optional">Дополнительные пожелания / материалы</label>
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="formInputWrap">
           <label for="originality">Оригинальность (уточните, входит ли цитирование в оригинальность)<span>*</span></label>
-          <input required id="originality" type="text" placeholder="Оригинальность не важна" />
+          <input required id="originality" type="text" placeholder="Нет требований по оригинальности / 70% (с учетом цитирования)" />
         </div>
         <div class="formInputWrap">
           <label for="optional">Дополнительные пожелания / материалы</label>
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         <div class="formInputWrap">
           <label for="originality">Оригинальность (уточните, входит ли цитирование в оригинальность)<span>*</span></label>
-          <input required id="originality" type="text" placeholder="Оригинальность не важна" />
+          <input required id="originality" type="text" placeholder="Нет требований по оригинальности / 70% (с учетом цитирования)" />
         </div>
         <div class="formInputWrap">
           <label for="optional">Дополнительные пожелания / материалы</label>
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         <div class="formInputWrap">
           <label for="originality">Оригинальность (уточните, входит ли цитирование в оригинальность)<span>*</span></label>
-          <input required id="originality" type="text" placeholder="Оригинальность не важна" />
+          <input required id="originality" type="text" placeholder="Нет требований по оригинальности / 70% (с учетом цитирования)" />
         </div>
         <div class="formInputWrap">
           <label for="optional">Дополнительные пожелания / материалы</label>
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         <div class="formInputWrap">
           <label for="originality">Оригинальность (уточните, входит ли цитирование в оригинальность)<span>*</span></label>
-          <input required id="originality" type="text" placeholder="Оригинальность не важна" />
+          <input required id="originality" type="text" placeholder="Нет требований по оригинальности / 70% (с учетом цитирования)" />
         </div>
         <div class="formInputWrap">
           <label for="optional">Дополнительные пожелания / материалы</label>
@@ -445,8 +445,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <input required class="date-time" type="datetime-local" id="deadline" name="deadline" />
           </div>
         <div class="formInputWrap">
-          <label for="optional">Дополнительные пожелания / материалы</label>
-          <textarea id="optional" placeholder="Материалы, источники..."></textarea>
+          <label for="optional">Дополнительные пожелания</label>
+          <textarea id="optional" placeholder="Напишите пожелания по формату занятий, знаниям репетитора или темам, которые нужно разобрать"></textarea>
         </div>
         <div class="formInputWrap">
           <label>Не забудьте прикрепить примеры заданий и тем, которые необходимо разобрать<span>*</span></label>
@@ -482,10 +482,6 @@ document.addEventListener("DOMContentLoaded", () => {
                   </label>
                 </div>
               </div>
-        <div class="formInputWrap">
-          <label for="optional">Дополнительные пожелания / материалы</label>
-          <textarea id="optional" placeholder="Материалы, источники..."></textarea>
-        </div>
       `,
     },
   };
